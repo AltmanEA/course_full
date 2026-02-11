@@ -1,0 +1,20 @@
+{
+  "slides": [
+    {
+      "name": "drizzle-intro",
+      "title": "Drizzle ORM: философия и schema-first подход"
+    },
+    {
+      "name": "drizzle-crud",
+      "title": "Drizzle ORM: CRUD и запросы"
+    },
+    {
+      "name": "drizzle-join",
+      "title": "dDrizzle ORM: JOIN, связи и транзакции"
+    },
+    {
+      "name": "drizzle-next",
+      "title": "Drizzle ORM в архитектуре Next.js"
+    }
+  ]
+}

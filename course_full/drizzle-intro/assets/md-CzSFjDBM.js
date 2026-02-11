@@ -1,0 +1,7 @@
+import{_ as o}from"./slidev/CodeBlockWrapper.vue_vue_type_script_setup_true_lang-CYH2pJ6Z.js";import{o as p,b as d,w as n,g as s,d as m,m as c,D as a,v as u,x as f,z as t}from"./modules/vue-C3xhSOii.js";import{I as g}from"./slidev/default-nhaweH9E.js";import{u as k,f as _}from"./slidev/context-C4WqjKS7.js";import"./modules/unplugin-icons-cxRfpM5q.js";import"./index-CJ6_mxdI.js";import"./modules/shiki-DI6_bogG.js";const $={__name:"slides.md__slidev_17",setup(h){const{$clicksContext:l,$frontmatter:i}=k();return l.setup(),(x,e)=>{const r=o;return p(),d(g,u(f(t(_)(t(i),16))),{default:n(()=>[e[1]||(e[1]=s("h2",null,"Структура проекта",-1)),m(r,c({},{title:"",ranges:[]}),{default:n(()=>[...e[0]||(e[0]=[s("pre",{class:"shiki shiki-themes vitesse-dark vitesse-light slidev-code",style:{"--shiki-dark":"#dbd7caee","--shiki-light":"#393a34","--shiki-dark-bg":"#121212","--shiki-light-bg":"#ffffff"}},[s("code",{class:"language-text"},[s("span",{class:"line"},[s("span",null,"src/")]),a(`
+`),s("span",{class:"line"},[s("span",null,"  db/")]),a(`
+`),s("span",{class:"line"},[s("span",null,"    schema/")]),a(`
+`),s("span",{class:"line"},[s("span",null,"      students.ts")]),a(`
+`),s("span",{class:"line"},[s("span",null,"      assignments.ts")]),a(`
+`),s("span",{class:"line"},[s("span",null,"      grades.ts")]),a(`
+`),s("span",{class:"line"},[s("span",null,"    client.ts")])])],-1)])]),_:1},16),e[2]||(e[2]=s("p",null,"Схема отделена от логики доступа.",-1))]),_:1},16)}}};export{$ as default};
