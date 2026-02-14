@@ -10,11 +10,19 @@
     },
     {
       "name": "drizzle-join",
-      "title": "dDrizzle ORM: JOIN, связи и транзакции"
+      "title": "Drizzle ORM: JOIN, связи и транзакции"
     },
     {
       "name": "drizzle-next",
       "title": "Drizzle ORM в архитектуре Next.js"
+    },
+    {
+      "name": "trpc-min",
+      "title": "tRPC в Next.js — Минимальный tRPC API"
+    },
+    {
+      "name": "trpc-crud",
+      "title": "tRPC в Next.js — CRUD и архитектура API-слоя"
     }
   ]
 }
