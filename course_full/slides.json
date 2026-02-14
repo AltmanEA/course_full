@@ -23,6 +23,14 @@
     {
       "name": "trpc-crud",
       "title": "tRPC в Next.js — CRUD и архитектура API-слоя"
+    },
+    {
+      "name": "trpc-adv",
+      "title": "tRPC в Next.js — Middleware, context и расширяемость API"
+    },
+    {
+      "name": "trpc-client",
+      "title": "tRPC в Next.js — Клиентский слой и архитектурная целостность"
     }
   ]
 }
