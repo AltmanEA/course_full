@@ -4,6 +4,21 @@ name: drizzle-next
 canvasWidth: 800
 routerMode: hash
 ---
+<style>
+.lab-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+.mermaid-fit {
+  transform: scale(0.7);
+  transform-origin: top center;
+}
+</style>
 
 # Drizzle ORM в архитектуре Next.js
 
@@ -31,7 +46,9 @@ routerMode: hash
 
 ---
 
-## Server-only функция (drizzle26)
+## Server-only функция
+
+<span class="lab-badge">🧪 drizzle26</span>
 
 ```ts
 "use server";
@@ -47,7 +64,9 @@ export async function getStudents() {
 
 ---
 
-## Singleton подключения (drizzle27)
+## Singleton подключения
+
+<span class="lab-badge">🧪 drizzle27</span>
 
 ```ts
 let _db: ReturnType<typeof drizzle> | undefined;
@@ -87,7 +106,9 @@ flowchart LR
 
 ---
 
-## Data-access функция (drizzle28)
+## Data-access функция
+
+<span class="lab-badge">🧪 drizzle28</span>
 
 ```ts
 export async function getStudentById(id: number) {
@@ -104,7 +125,9 @@ export async function getStudentById(id: number) {
 
 ---
 
-## Server Action поверх data-access (drizzle29)
+## Server Action поверх data-access
+
+<span class="lab-badge">🧪 drizzle29</span>
 
 ```ts
 "use server";
@@ -123,7 +146,9 @@ Server Action:
 
 ---
 
-## Server Component loader (drizzle30)
+## Server Component loader
+
+<span class="lab-badge">🧪 drizzle30</span>
 
 ```ts
 export default async function Page() {
@@ -143,7 +168,9 @@ export default async function Page() {
 
 ---
 
-## Обработка отсутствующих данных (drizzle31)
+## Обработка отсутствующих данных
+
+<span class="lab-badge">🧪 drizzle31</span>
 
 ```ts
 export async function getStudentOrNull(id: number) {
@@ -157,7 +184,9 @@ SELECT может вернуть пустой массив.
 
 ---
 
-## Обработка ошибки БД (drizzle32)
+## Обработка ошибки БД
+
+<span class="lab-badge">🧪 drizzle32</span>
 
 ```ts
 export async function createStudent(data: InsertStudent) {
@@ -175,7 +204,9 @@ export async function createStudent(data: InsertStudent) {
 
 ---
 
-## Runtime-проверка server-only (drizzle33)
+## Runtime-проверка server-only
+
+<span class="lab-badge">🧪 drizzle33</span>
 
 ```ts
 if (typeof window !== "undefined") {
@@ -187,7 +218,9 @@ if (typeof window !== "undefined") {
 
 ---
 
-## Повторное использование data-access (drizzle34)
+## Повторное использование data-access
+
+<span class="lab-badge">🧪 drizzle34</span>
 
 ```ts
 export async function getStudentNames() {
@@ -201,7 +234,9 @@ export async function getStudentNames() {
 
 ---
 
-## Полный data-flow (drizzle35)
+## Полный data-flow
+
+<span class="lab-badge">🧪 drizzle35</span>
 
 ```mermaid
 flowchart LR

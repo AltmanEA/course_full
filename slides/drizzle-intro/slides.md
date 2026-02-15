@@ -3,6 +3,21 @@ title: "Drizzle ORM: философия и schema-first подход"
 canvasWidth: 800
 routerMode: hash
 ---
+<style>
+.lab-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+.mermaid-fit {
+  transform: scale(0.7);
+  transform-origin: top center;
+}
+</style>
 
 # Drizzle ORM: философия и schema-first подход
 
@@ -94,7 +109,9 @@ erDiagram
 
 ---
 
-## Базовое описание таблицы (drizzle01)
+## Базовое описание таблицы
+
+<span class="lab-badge">🧪 drizzle01</span>
 
 ```ts
 export const students = pgTable("students", {
@@ -118,7 +135,9 @@ CREATE TABLE students (
 
 ---
 
-## NOT NULL и PRIMARY KEY (drizzle02–drizzle04)
+## NOT NULL и PRIMARY KEY
+
+<span class="lab-badge">🧪 drizzle02–drizzle04</span>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
 
@@ -161,7 +180,9 @@ email TEXT NOT NULL
 
 ---
 
-## UNIQUE (drizzle03)
+## UNIQUE
+
+<span class="lab-badge">🧪 drizzle03</span>
 
 ```ts
 export const students = pgTable("students", {
@@ -175,14 +196,12 @@ export const studentsEmailIndex =
     .on(students.email);
 ```
 
-SQL:
+SQL: UNIQUE предотвращает дублирование данных.
 
 ```sql
 CREATE UNIQUE INDEX students_email_unique
 ON students(email);
 ```
-
-UNIQUE предотвращает дублирование данных.
 
 ---
 
@@ -202,7 +221,9 @@ export const assignments = pgTable("assignments", {
 
 ---
 
-## FOREIGN KEY (drizzle05)
+## FOREIGN KEY
+
+<span class="lab-badge">🧪 drizzle05</span>
 
 ```ts
 export const grades = pgTable("grades", {

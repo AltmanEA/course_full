@@ -4,7 +4,21 @@ name: trpc-min
 canvasWidth: 800
 routerMode: hash
 ---
-
+<style>
+.lab-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+.mermaid-fit {
+  transform: scale(0.7);
+  transform-origin: top center;
+}
+</style>
 
 # tRPC в Next.js — Минимальный tRPC API
 
@@ -104,7 +118,9 @@ procedure — фабрика операций
 
 ---
 
-# trpc01 — Минимальный router
+# Минимальный router
+
+<span class="lab-badge">🧪 trpc01</span>
 
 Контракт приложения — это router.
 
@@ -129,7 +145,9 @@ procedure — типизированная функция API.
 
 ---
 
-# trpc02 — Первая query
+# Первая query
+
+<span class="lab-badge">🧪 trpc02</span>
 
 ```ts
 export const appRouter = router({
@@ -142,7 +160,9 @@ query — операция чтения.
 
 ---
 
-# trpc03 — Структурированный результат
+# Структурированный результат
+
+<span class="lab-badge">🧪 trpc03</span>
 
 Типизация распространяется на объект.
 
@@ -165,7 +185,9 @@ RPC-процедура принимает аргументы.
 Input — часть контракта.
 
 
-## trpc04 — Input в query
+## Input в query
+
+<span class="lab-badge">🧪 trpc04</span>
 
 ```ts
 hello: publicProcedure
@@ -181,7 +203,9 @@ input типизируется автоматически.
 
 ---
 
-# trpc05 — Декларативная валидация
+# Декларативная валидация
+
+<span class="lab-badge">🧪 trpc05</span>
 
 zod выполняет:
 
@@ -210,7 +234,9 @@ mutation
 
 ---
 
-# trpc06 — Первая mutation
+# Первая mutation
+
+<span class="lab-badge">🧪 trpc06</span>
 
 ```ts
 createUser: publicProcedure
@@ -260,7 +286,9 @@ Context передаёт зависимости.
 
 ---
 
-# trpc07 — Context
+# Context
+
+<span class="lab-badge">🧪 trpc07</span>
 
 ```ts
 createUser: publicProcedure
@@ -285,7 +313,9 @@ Middleware расширяет поведение:
 
 ---
 
-# trpc08 — Базовый middleware
+# Базовый middleware
+
+<span class="lab-badge">🧪 trpc08</span>
 
 ```ts
 const loggerMiddleware = t.middleware(async (opts) => {
@@ -306,7 +336,9 @@ const loggerMiddleware = t.middleware(async (opts) => {
 
 ---
 
-# trpc09 — protectedProcedure
+# protectedProcedure
+
+<span class="lab-badge">🧪 trpc09</span>
 
 ```ts
 const protectedProcedure =
@@ -321,7 +353,9 @@ const protectedProcedure =
 
 API масштабируется по доменам.
 
-## trpc10 — Вложенные router
+## Вложенные router
+
+<span class="lab-badge">🧪 trpc10</span>
 
 ```ts
 const userRouter = router({

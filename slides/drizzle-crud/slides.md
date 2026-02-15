@@ -4,6 +4,22 @@ name: drizzle-crud
 canvasWidth: 800
 routerMode: hash
 ---
+<style>
+.lab-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+.mermaid-fit {
+  transform: scale(0.7);
+  transform-origin: top center;
+}
+</style>
+
 # Drizzle ORM: CRUD и запросы
 
 ---
@@ -39,7 +55,9 @@ Drizzle — типобезопасный способ писать эти опе
 
 ---
 
-## INSERT (drizzle06)
+## INSERT
+
+<span class="lab-badge">🧪 drizzle06</span>
 
 ```ts
 await db.insert(students).values({
@@ -80,7 +98,9 @@ returning():
 
 ---
 
-## SELECT без условий (drizzle07)
+## SELECT без условий
+
+<span class="lab-badge">🧪 drizzle07</span>
 
 ```ts
 const list = await db
@@ -99,7 +119,9 @@ SELECT * FROM students;
 
 ---
 
-## WHERE (drizzle08)
+## WHERE
+
+<span class="lab-badge">🧪 drizzle08</span>
 
 ```ts
 const student = await db
@@ -119,7 +141,9 @@ Drizzle использует функции-операторы: eq, like, inArra
 
 ---
 
-## Проекция полей (drizzle11)
+## Проекция полей
+
+<span class="lab-badge">🧪 drizzle11</span>
 
 ```ts
 const list = await db
@@ -140,7 +164,9 @@ SELECT id, name FROM students;
 
 ---
 
-## Композиция условий (drizzle14)
+## Композиция условий
+
+<span class="lab-badge">🧪 drizzle14</span>
 
 ```ts
 const result = await db
@@ -154,18 +180,19 @@ const result = await db
   );
 ```
 
-SQL:
+SQL (and / or отражают логическую структуру SQL):
 
 ```sql
 WHERE name LIKE '%Ali%'
 AND email = 'alice@example.com'
 ```
 
-and / or отражают логическую структуру SQL.
 
 ---
 
-## Сортировка и пагинация (drizzle12–13)
+## Сортировка и пагинация
+
+<span class="lab-badge">🧪 drizzle12–13</span>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
 
@@ -204,7 +231,9 @@ const paginated = await db
 
 ---
 
-## UPDATE (drizzle09)
+## UPDATE
+
+<span class="lab-badge">🧪 drizzle09</span>
 
 ```ts
 await db
@@ -226,7 +255,9 @@ WHERE id = 1;
 
 ---
 
-## DELETE (drizzle10)
+## DELETE
+
+<span class="lab-badge">🧪 drizzle10</span>
 
 ```ts
 await db
@@ -245,7 +276,9 @@ WHERE id = 1;
 
 ---
 
-## Агрегатные функции (drizzle15)
+## Агрегатные функции
+
+<span class="lab-badge">🧪 drizzle15</span>
 
 ```ts
 const result = await db

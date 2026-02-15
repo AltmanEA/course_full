@@ -4,6 +4,21 @@ name: trpc-crud
 canvasWidth: 800
 routerMode: hash
 ---
+<style>
+.lab-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+.mermaid-fit {
+  transform: scale(0.7);
+  transform-origin: top center;
+}
+</style>
 
 # tRPC в Next.js — CRUD и архитектура API-слоя
 
@@ -46,7 +61,9 @@ API ≠ Data layer
 
 ---
 
-# trpc11 — Data-access через context
+# Data-access через context
+
+<span class="lab-badge">🧪 trpc11</span>
 
 Dependency injection через ctx.
 
@@ -154,7 +171,9 @@ API — контракт.
 
 ---
 
-# trpc16 — TRPCError
+# TRPCError
+
+<span class="lab-badge">🧪 trpc16</span>
 
 Краткая модель ошибок:
 
@@ -227,7 +246,9 @@ postRouter
 
 ---
 
-# trpc17 — userRouter
+# userRouter
+
+<span class="lab-badge">🧪 trpc17</span>
 
 ```ts
 export const userRouter = router({
@@ -242,7 +263,9 @@ export const userRouter = router({
 
 ---
 
-# trpc18 — postRouter
+# postRouter
+
+<span class="lab-badge">🧪 trpc18</span>
 
 ```ts
 export const postRouter = router({
@@ -257,7 +280,9 @@ export const postRouter = router({
 
 ---
 
-# trpc19 — Объединение router
+# Объединение router
+
+<span class="lab-badge">🧪 trpc19</span>
 
 ```ts
 export const appRouter = router({

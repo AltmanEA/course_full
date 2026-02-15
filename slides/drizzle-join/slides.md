@@ -4,6 +4,21 @@ name: drizzle-join
 canvasWidth: 800
 routerMode: hash
 ---
+<style>
+.lab-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+.mermaid-fit {
+  transform: scale(0.7);
+  transform-origin: top center;
+}
+</style>
 
 # Drizzle ORM: JOIN, связи и транзакции
 
@@ -60,7 +75,9 @@ Grade — промежуточная таблица.
 
 ---
 
-## INNER JOIN (drizzle16)
+## INNER JOIN
+
+<span class="lab-badge">🧪 drizzle16</span>
 
 ```ts
 const result = await db
@@ -72,7 +89,7 @@ const result = await db
   );
 ```
 
-SQL:
+SQL (INNER JOIN возвращает только совпадающие строки): 
 
 ```sql
 SELECT *
@@ -81,11 +98,13 @@ INNER JOIN grades
 ON students.id = grades.student_id;
 ```
 
-INNER JOIN возвращает только совпадающие строки.
+
 
 ---
 
-## LEFT JOIN (drizzle17)
+## LEFT JOIN
+
+<span class="lab-badge">🧪 drizzle17</span>
 
 ```ts
 const result = await db
@@ -97,7 +116,7 @@ const result = await db
   );
 ```
 
-SQL:
+SQL (LEFT JOIN сохраняет строки левой таблицы):
 
 ```sql
 SELECT *
@@ -106,11 +125,13 @@ LEFT JOIN grades
 ON students.id = grades.student_id;
 ```
 
-LEFT JOIN сохраняет строки левой таблицы.
+
 
 ---
 
-## JOIN + WHERE (drizzle18)
+## JOIN + WHERE
+
+<span class="lab-badge">🧪 drizzle18</span>
 
 ```ts
 const result = await db
@@ -123,7 +144,7 @@ const result = await db
   .where(eq(grades.score, 100));
 ```
 
-SQL:
+SQL (JOIN можно комбинировать с фильтрацией):
 
 ```sql
 SELECT *
@@ -133,11 +154,13 @@ ON students.id = grades.student_id
 WHERE grades.score = 100;
 ```
 
-JOIN можно комбинировать с фильтрацией.
+
 
 ---
 
-## Проекция из нескольких таблиц (drizzle19)
+## Проекция из нескольких таблиц
+
+<span class="lab-badge">🧪 drizzle19</span>
 
 ```ts
 const result = await db
@@ -156,7 +179,9 @@ const result = await db
 
 ---
 
-## Many-to-many (drizzle20)
+## Many-to-many
+
+<span class="lab-badge">🧪 drizzle20</span>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
 
@@ -203,7 +228,9 @@ JOIN assignments
 
 ---
 
-## GROUP BY (drizzle22)
+## GROUP BY
+
+<span class="lab-badge">🧪 drizzle22</span>
 
 ```ts
 const result = await db
@@ -219,17 +246,19 @@ const result = await db
   .groupBy(students.id);
 ```
 
-SQL:
+SQL (GROUP BY структурирует агрегированные данные):
 
 ```sql
 GROUP BY students.id;
 ```
 
-GROUP BY структурирует агрегированные данные.
+
 
 ---
 
-## Сортировка по агрегату (drizzle23)
+## Сортировка по агрегату
+
+<span class="lab-badge">🧪 drizzle23</span>
 
 ```ts
 const result = await db
@@ -250,7 +279,9 @@ const result = await db
 
 ---
 
-## Транзакция (drizzle24)
+## Транзакция
+
+<span class="lab-badge">🧪 drizzle24</span>
 
 ```ts
 await db.transaction(async (tx) => {
@@ -271,7 +302,9 @@ await db.transaction(async (tx) => {
 
 ---
 
-## Rollback при ошибке (drizzle25)
+## Rollback при ошибке
+
+<span class="lab-badge">🧪 drizzle25</span>
 
 ```ts
 await db.transaction(async (tx) => {

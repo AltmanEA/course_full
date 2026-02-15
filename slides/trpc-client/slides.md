@@ -4,6 +4,21 @@ name: trpc-client
 canvasWidth: 800
 routerMode: hash
 ---
+<style>
+.lab-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+.mermaid-fit {
+  transform: scale(0.7);
+  transform-origin: top center;
+}
+</style>
 
 # tRPC в Next.js — Клиентский слой и архитектурная целостность
 
@@ -49,7 +64,9 @@ Client автоматически получает типизированные 
 
 ---
 
-# trpc31 — Первый useQuery
+# Первый useQuery
+
+<span class="lab-badge">🧪 trpc31</span>
 
 ```ts
 const { data, isLoading } =
@@ -76,7 +93,9 @@ React Query управляет состоянием.
 
 ---
 
-# trpc32 — useQuery с input
+# useQuery с input
+
+<span class="lab-badge">🧪 trpc32</span>
 
 Input — часть ключа кэша.
 
@@ -100,7 +119,9 @@ Mutation:
 
 ---
 
-# trpc33 — Первый useMutation
+# Первый useMutation
+
+<span class="lab-badge">🧪 trpc33</span>
 
 ```ts
 const mutation =
@@ -126,7 +147,9 @@ Mutation не обновляет query автоматически.
 
 ---
 
-# trpc34 — invalidate
+# invalidate
+
+<span class="lab-badge">🧪 trpc34</span>
 
 ```ts
 const utils = trpc.useUtils()
@@ -152,7 +175,9 @@ onSuccess:
 
 ---
 
-# trpc35 — onSuccess
+# onSuccess
+
+<span class="lab-badge">🧪 trpc35</span>
 
 ```ts
 trpc.user.update.useMutation({
@@ -166,7 +191,9 @@ Mutation управляет реакцией системы.
 
 ---
 
-# trpc36 — onError
+# onError
+
+<span class="lab-badge">🧪 trpc36</span>
 
 ```ts
 trpc.user.create.useMutation({
@@ -197,7 +224,9 @@ API остаётся неизменным.
 
 ---
 
-# trpc37 — Разделение hooks
+# Разделение hooks
+
+<span class="lab-badge">🧪 trpc37</span>
 
 ```ts
 export const userHooks = {
@@ -210,7 +239,9 @@ export const userHooks = {
 
 ---
 
-# trpc38 — Композиция hooks
+# Композиция hooks
+
+<span class="lab-badge">🧪 trpc38</span>
 
 ```ts
 export const api = {
@@ -225,7 +256,9 @@ export const api = {
 
 ---
 
-# trpc39 — Централизованный экспорт
+# Централизованный экспорт
+
+<span class="lab-badge">🧪 trpc39</span>
 
 ```ts
 export * from './userHooks'
@@ -265,7 +298,9 @@ flowchart LR
 
 ---
 
-# trpc40 — Полный цикл
+# Полный цикл
+
+<span class="lab-badge">🧪 trpc40</span>
 
 1. useQuery загружает данные  
 2. useMutation изменяет состояние  

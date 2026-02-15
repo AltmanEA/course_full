@@ -4,6 +4,21 @@ name: trpc-adv
 canvasWidth: 800
 routerMode: hash
 ---
+<style>
+.lab-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+.mermaid-fit {
+  transform: scale(0.7);
+  transform-origin: top center;
+}
+</style>
 
 # tRPC в Next.js — Middleware, context и расширяемость API
 
@@ -49,7 +64,9 @@ Context может содержать:
 
 ---
 
-# trpc21 — Metadata из context
+# Metadata из context
+
+<span class="lab-badge">🧪 trpc21</span>
 
 ```ts
 getRequestId: publicProcedure
@@ -129,7 +146,9 @@ Middleware может анализировать результат.
 
 ---
 
-# trpc22 — Timing middleware
+# Timing middleware
+
+<span class="lab-badge">🧪 trpc22</span>
 
 Измеряет время.
 
@@ -139,7 +158,9 @@ Middleware может анализировать результат.
 
 ---
 
-# trpc23 — Audit middleware
+# Audit middleware
+
+<span class="lab-badge">🧪 trpc23</span>
 
 ```ts
 const auditMiddleware = t.middleware(async (opts) => {
@@ -158,7 +179,9 @@ API расширяется без изменения процедур.
 
 ---
 
-# Response shaping (trpc24)
+# Response shaping
+
+<span class="lab-badge">🧪 trpc24</span>
 
 Middleware может трансформировать ответ.
 
@@ -193,7 +216,9 @@ const protectedProcedure =
 
 ---
 
-# trpc25 — Role-based доступ
+# Role-based доступ
+
+<span class="lab-badge">🧪 trpc25</span>
 
 ```ts
 const adminProcedure =
@@ -233,7 +258,9 @@ RBAC реализуется композиционно.
 
 ---
 
-# trpc26 — Error factory
+# Error factory
+
+<span class="lab-badge">🧪 trpc26</span>
 
 ```ts
 function createNotFoundError(entity: string) {
@@ -248,7 +275,9 @@ function createNotFoundError(entity: string) {
 
 ---
 
-# trpc27 — Нормализация доменной ошибки
+# Нормализация доменной ошибки
+
+<span class="lab-badge">🧪 trpc27</span>
 
 ```ts
 try {
@@ -265,7 +294,9 @@ try {
 
 ---
 
-# Deterministic logging (trpc28)
+# Deterministic logging
+
+<span class="lab-badge">🧪 trpc28</span>
 
 ```ts
 const loggingMiddleware = t.middleware(async (opts) => {
@@ -285,7 +316,9 @@ const loggingMiddleware = t.middleware(async (opts) => {
 
 ---
 
-# Порядок middleware (trpc29)
+# Порядок middleware
+
+<span class="lab-badge">🧪 trpc29</span>
 
 ```ts
 procedure
@@ -299,7 +332,9 @@ procedure
 
 ---
 
-# Расширение context (trpc30)
+# Расширение context
+
+<span class="lab-badge">🧪 trpc30</span>
 
 ```ts
 const requestIdMiddleware = t.middleware(async (opts) => {
