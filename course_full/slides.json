@@ -31,6 +31,22 @@
     {
       "name": "trpc-client",
       "title": "tRPC в Next.js — Клиентский слой и архитектурная целостность"
+    },
+    {
+      "name": "bauth-intro",
+      "title": "Better Auth в Next.js - Аутентификация как инфраструктурный слой"
+    },
+    {
+      "name": "bauth-avtorization",
+      "title": "Better Auth в Next.js - Авторизация и защита API"
+    },
+    {
+      "name": "bauth-middle",
+      "title": "Better Auth в Next.js - Middleware и production security"
+    },
+    {
+      "name": "bauth-client",
+      "title": "Better Auth в Next.js - Client integration и полный data-flow"
     }
   ]
 }

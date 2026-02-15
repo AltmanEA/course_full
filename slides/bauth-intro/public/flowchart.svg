@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1000" height="420" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+    <style>
+      .box { fill: #f7f9fc; stroke: #333; stroke-width: 1.5; rx: 10; ry: 10; }
+      .text { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Arial, sans-serif; font-size: 14px; fill: #111; text-anchor: middle; dominant-baseline: middle; }
+      .arrow { stroke: #333; stroke-width: 1.5; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <!-- Top row -->
+  <rect class="box" x="40"  y="60"  width="180" height="50"/><text class="text" x="130" y="85">Register</text>
+  <rect class="box" x="280" y="60"  width="180" height="50"/><text class="text" x="370" y="85">Login</text>
+  <rect class="box" x="520" y="60"  width="180" height="50"/><text class="text" x="610" y="85">Cookie</text>
+  <rect class="box" x="760" y="60"  width="180" height="50"/><text class="text" x="850" y="85">Request</text>
+
+  <!-- Bottom row -->
+  <rect class="box" x="40"  y="180" width="180" height="50"/><text class="text" x="130" y="205">SessionCheck</text>
+  <rect class="box" x="280" y="180" width="180" height="50"/><text class="text" x="370" y="205">Context</text>
+  <rect class="box" x="520" y="180" width="180" height="50"/><text class="text" x="610" y="205">ProtectedRoute</text>
+  <rect class="box" x="760" y="180" width="180" height="50"/><text class="text" x="850" y="205">DB</text>
+
+  <!-- Horizontal arrows top -->
+  <path class="arrow" d="M 220 85 L 280 85"/>
+  <path class="arrow" d="M 460 85 L 520 85"/>
+  <path class="arrow" d="M 700 85 L 760 85"/>
+
+  <!-- Horizontal arrows bottom -->
+  <path class="arrow" d="M 220 205 L 280 205"/>
+  <path class="arrow" d="M 460 205 L 520 205"/>
+  <path class="arrow" d="M 700 205 L 760 205"/>
+
+  <!-- Main flow arrow: exits Request on the right, runs between rows, enters SessionCheck from the LEFT -->
+  <path class="arrow" d="M 940 85 L 980 85 L 980 150 L 0 150 L 0 205 L 40 205"/>
+</svg>
